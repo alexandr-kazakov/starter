@@ -1,18 +1,14 @@
 const gulp = require('gulp');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
-const babel = require('gulp-babel');
 const postcss = require('gulp-postcss');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('autoprefixer');
 const uglify = require('gulp-uglify');
-const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
 const pug = require('gulp-pug');
 const browserSync = require('browser-sync').create();
 const browserSync2 = require('browser-sync').create();
-
-gulp.task('default', () => {});
 
 /* -------------------------------------------------------------------------
   begin Copy
@@ -60,62 +56,26 @@ gulp.task('sass', () => gulp
   )
   .pipe(rename('bundle.css'))
   .pipe(gulp.dest('dist/css'))
-
-  .pipe(
-    rename({
-      extname: '.min.css',
-    }),
-  )
+  .pipe(postcss([autoprefixer()]))
+  .pipe(gulp.dest('./dist/css'))
+  .pipe(rename({ suffix: '.min' }))
   .pipe(
     sass({
       outputStyle: 'compressed',
     }).on('error', sass.logError),
   )
-  .pipe(gulp.dest('dist/css')));
+  .pipe(gulp.dest('./dist/css'))
+  .pipe(sourcemaps.init())
+  .pipe(sourcemaps.write('.'))
+  .pipe(gulp.dest('./dist/css')));
 
 /* -------------------------------------------------------------------------
    end Sass
  * ------------------------------------------------------------------------- */
 
 /* -------------------------------------------------------------------------
-  begin Autoprefixer
-* ------------------------------------------------------------------------- */
-
-gulp.task('autoprefixer', () => gulp
-  .src('./dist/css/*.css')
-  .pipe(postcss([autoprefixer()]))
-  .pipe(sourcemaps.init())
-  .pipe(sourcemaps.write('.'))
-  .pipe(gulp.dest('./dist/css')));
-
-/* -------------------------------------------------------------------------
-   end Autoprefixer
- * ------------------------------------------------------------------------- */
-
-/* -------------------------------------------------------------------------
   begin Minify JavaScript
 * ------------------------------------------------------------------------- */
-
-gulp.task('uglify', () => gulp
-  .src('build/js/main.js')
-
-  .pipe(
-    babel({
-      presets: ['env'],
-    }),
-  )
-// This will output the non-minified version
-  .pipe(rename('bundle.js'))
-  .pipe(gulp.dest('dist/js'))
-
-// This will minify and rename to foo.min.js
-  .pipe(uglify())
-  .pipe(
-    rename({
-      extname: '.min.js',
-    }),
-  )
-  .pipe(gulp.dest('dist/js')));
 
 gulp.task('scripts', () => gulp
   .src('./build/js/main.js')
@@ -149,7 +109,7 @@ gulp.task('scripts', () => gulp
   .pipe(gulp.dest('./dist/js'))
   .pipe(sourcemaps.init())
   .pipe(sourcemaps.write('.'))
-  .pipe(gulp.dest('./')));
+  .pipe(gulp.dest('./dist/js')));
 
 /* -------------------------------------------------------------------------
    end Minify JavaScript
@@ -203,10 +163,8 @@ gulp.task('watch', () => {
   });
 
   gulp.watch('./build/pug/*.pug', gulp.series('pug'));
-  gulp.watch('./build/sass/**/*.scss', gulp.series('sass'));
-  gulp.watch('./build/js/**/*.js', gulp.series('scripts'));
-  // gulp.watch('./build/js/**/*.js', gulp.series('uglify'));
-  gulp.watch('./dist/css/**/*.css', gulp.series('autoprefixer'));
+  gulp.watch('./build/sass/global.scss', gulp.series('sass'));
+  gulp.watch('./build/js/main.js', gulp.series('scripts'));
   gulp.watch('./dist/js/*.js').on('change', browserSync.reload);
   gulp.watch('./dist/js/*.js').on('change', browserSync2.reload);
   gulp.watch('./dist/css/*.css').on('change', browserSync.reload);
