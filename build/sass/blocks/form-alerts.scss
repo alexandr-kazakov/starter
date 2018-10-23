@@ -1,0 +1,40 @@
+/* -------------------------------------------------------------------------
+   begin Form Alerts
+ * ------------------------------------------------------------------------- */
+.form-alerts {
+  position: relative;
+  padding: 15px 20px 15px 15px;
+  margin: 10px 0;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  display: none;
+  &.form-alerts_success {
+    display: block;
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+  }
+  &.form-alerts_error {
+    display: block;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+  }
+  button.form-alerts__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: none;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: 0.2;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   end Form Alerts
+ * ------------------------------------------------------------------------- */

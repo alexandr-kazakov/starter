@@ -1,0 +1,128 @@
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  color: #333333;
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+::selection {
+  background-color: rgba(251, 185, 65, 0.5);
+  text-shadow: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  -webkit-text-decoration-skip: objects;
+  &:hover {
+    text-decoration: none;
+  }
+  &:active {
+    text-decoration: none;
+  }
+  &:focus {
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.pos-relative {
+  position: relative;
+}
+
+.float-l {
+  float: left;
+}
+
+.float-r {
+  float: right;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.dis-block {
+  display: block;
+}
+
+.dis-i-block {
+  display: inline-block;
+}
+
+.t-t-uppercase {
+  text-transform: uppercase;
+}
+
+.text-align-c {
+  text-align: center;
+}
+
+.btn-clear {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.image-block {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.transition-basic {
+  transition: all 0.3s;
+}
+
+.list-clear {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+@-webkit-keyframes autofill {
+  to {
+    color: #fff;
+    background: transparent;
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+}

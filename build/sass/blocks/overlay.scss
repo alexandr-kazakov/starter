@@ -1,0 +1,26 @@
+/* -------------------------------------------------------------------------
+   end Overlay
+ * ------------------------------------------------------------------------- */
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  height: 100%;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 90;
+  opacity: 0;
+  transform: translateY(-4000px);
+  transition: opacity 0.1s, transform 0.1s;
+  &.overlay__show {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* -------------------------------------------------------------------------
+   end Overlay
+ * ------------------------------------------------------------------------- */

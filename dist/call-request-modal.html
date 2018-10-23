@@ -1,0 +1,45 @@
+
+<!-- begin Call Request Modal -->
+<div class="call-request-modal.modal.fade" id="call-request-modal" tabindex="-1" role="dialog" aria-labelledby="call-request-modal__title">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="call-request-modal__close-btn close" type="button" data-dismiss="modal" aria-label="Close"><span class="call-request-modal__close-btn-icon" aria-hidden="true">&times;</span></button>
+        <h4 class="call-request-modal__title" id="call-request-modal__title">Заказать бесплатный звонок</h4>
+      </div>
+      <div class="modal-body">
+        <p>Наши менеджеры перезвонят вам в ближайшее время</p>
+        <form class="form-call-request clearfix" action="contact.php" method="post" id="form-call-request" data-parsley-validate="data-parsley-validate">
+          <ul class="form-call-request__items">
+            <li class="form-call-request__item">
+              <label class="form-call-request__label form-call-request__label-user" for="form-call-request__name"></label>
+              <input class="form-call-request__name" type="text" name="contact-name" id="form-call-request__name" placeholder="Имя*" required="required"/>
+            </li>
+            <li class="form-call-request__item">
+              <label class="form-call-request__label form-call-request__label-phone" for="form-call-request__phone"></label>
+              <input class="form-call-request__phone" type="tel" name="contact-phone" id="form-call-request__phone" placeholder="Телефон*" required="required" pattern="^+d(d{3})sd{3}[-]d{2}[-]d{2}$"/>
+            </li>
+            <li class="form-call-request__item">
+              <label class="form-call-request__label form-call-request__label-email" for="form-call-request__email"></label>
+              <input class="form-call-request__email" type="email" name="contact-email" id="form-call-request__email" placeholder="Email"/>
+            </li>
+            <li class="form-call-request__item">
+              <label class="form-call-request__label form-call-request__label-product" for="form-call-request__product"></label>
+              <input class="form-call-request__product" type="text" name="contact-product" id="form-call-request__product" placeholder="Наименование"/>
+            </li>
+            <li class="form-call-request__item">
+              <textarea class="form-call-request__message" name="contact-message" placeholder="Ваше сообщение"></textarea>
+            </li>
+            <li class="form-call-request__item">
+              <button class="form-call-request__submit" type="submit">Заказать звонок</button>
+            </li>
+          </ul>
+        </form>
+        <div class="form-alerts">
+          <button class="form-alerts__close" type="button">&times;</button><span class="form-alerts__message"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Call Request Modal-->

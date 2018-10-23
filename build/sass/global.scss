@@ -1,0 +1,13 @@
+// @import 'core/variables';
+// @import 'core/mixins';
+@import '../../node_modules/normalize.css/normalize';
+@import 'core/base';
+
+@import '../../node_modules/swiper/dist/css/swiper';
+
+@import 'blocks/back-to-top-button';
+@import 'blocks/form-alerts';
+@import 'blocks/back-to-top-button';
+@import 'blocks/nav';
+@import 'blocks/overlay';
+@import 'blocks/parsley';
