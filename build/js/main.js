@@ -1,11 +1,7 @@
-// detect mobile devices
-import './blocks/mobileDetect';
+import './libraries/inputmask';
+// import './libraries/inputmask';
 
-// form validation
-// import 'parsleyjs';
+// form jQuery Core + Plugins
+import './libraries/jquery';
 
-/* begin Document Ready
- ***************************************************************************** */
-document.addEventListener('DOMContentLoaded', (event) => {});
-/* end Document Ready
-   ***************************************************************************** */
+// import './blocks/test';

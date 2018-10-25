@@ -1,0 +1,32 @@
+// begin Call Request Modal 
+div(class="call-request-modal.modal.fade" id="call-request-modal" tabindex="-1" role="dialog" aria-labelledby="call-request-modal__title")
+  div(class="modal-dialog" role="document")
+    div.modal-content
+      div.modal-header
+        button(type="button" class="call-request-modal__close-btn close" data-dismiss="modal" aria-label="Close")
+          span(aria-hidden="true" class="call-request-modal__close-btn-icon") &times;
+        h4(class="call-request-modal__title" id="call-request-modal__title") Заказать бесплатный звонок
+      div.modal-body
+        p Наши менеджеры перезвонят вам в ближайшее время
+        form(action="contact.php" method="post" id="form-call-request" class="form-call-request clearfix" data-parsley-validate)
+          ul.form-call-request__items
+            li.form-call-request__item
+              label(class="form-call-request__label form-call-request__label-user" for="form-call-request__name")
+              input(type="text" name="contact-name" id="form-call-request__name" placeholder="Имя*" required class="form-call-request__name")
+            li.form-call-request__item
+              label(class="form-call-request__label form-call-request__label-phone" for="form-call-request__phone")
+              input(type="tel" name="contact-phone" id="form-call-request__phone" placeholder="Телефон*" required pattern="^\+\d\(\d{3}\)\s\d{3}[-]\d{2}[-]\d{2}$" class="form-call-request__phone")
+            li.form-call-request__item
+              label(class="form-call-request__label form-call-request__label-email" for="form-call-request__email")
+              input(type="email" name="contact-email" id="form-call-request__email" placeholder="Email" class="form-call-request__email")
+            li.form-call-request__item
+              label(class="form-call-request__label form-call-request__label-product" for="form-call-request__product")
+              input(type="text" name="contact-product" id="form-call-request__product" placeholder="Наименование" class="form-call-request__product")
+            li.form-call-request__item
+              textarea(name="contact-message" placeholder="Ваше сообщение" class="form-call-request__message")
+            li.form-call-request__item
+              button(type="submit" class="form-call-request__submit") Заказать звонок
+        div.form-alerts
+          button(type="button" class="form-alerts__close") &times;
+          span.form-alerts__message
+// end Call Request Modal

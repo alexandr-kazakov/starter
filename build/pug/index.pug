@@ -1,6 +1,11 @@
-extends layout.pug
+extends blocks/layout.pug
 
 block title
   | Главная страница
 
 block content
+  main
+    +b.container
+      +b.row
+        +b.col-xl-12
+          +welcome-box('fgh','sdf','asd', 'sdf')

@@ -47,72 +47,12 @@ a {
   }
 }
 
-.hide {
+.hidden {
   display: none;
 }
 
-.show {
+.visible {
   display: block;
-}
-
-.clearfix:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-.pos-relative {
-  position: relative;
-}
-
-.float-l {
-  float: left;
-}
-
-.float-r {
-  float: right;
-}
-
-.fw-bold {
-  font-weight: bold;
-}
-
-.dis-block {
-  display: block;
-}
-
-.dis-i-block {
-  display: inline-block;
-}
-
-.t-t-uppercase {
-  text-transform: uppercase;
-}
-
-.text-align-c {
-  text-align: center;
-}
-
-.btn-clear {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.image-block {
-  display: block;
-  height: auto;
-  width: 100%;
-}
-
-.transition-basic {
-  transition: all 0.3s;
-}
-
-.list-clear {
-  list-style: none;
-  margin-bottom: 0;
-  padding-left: 0;
 }
 
 @-webkit-keyframes autofill {
