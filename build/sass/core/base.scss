@@ -12,6 +12,14 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
   line-height: 1.4;
+  @include media('<xl') {
+    font-size: 1.5rem;
+  }
+  @include media('<lg') {
+    font-size: 1.4rem;
+  }
+  @include media('<md') {
+  }
 }
 
 *,
@@ -25,7 +33,7 @@ body {
 }
 
 ::selection {
-  background-color: rgba(251, 185, 65, 0.5);
+  background-color: rgb(138, 138, 138);
   text-shadow: none;
 }
 
@@ -34,26 +42,19 @@ svg:not(:root) {
 }
 
 a {
+  color: #039be5;
   text-decoration: none;
   -webkit-text-decoration-skip: objects;
   &:hover {
-    text-decoration: none;
+    text-decoration: underline;
   }
   &:active {
-    text-decoration: none;
+    text-decoration: underline;
   }
   &:focus {
     outline: none;
-    text-decoration: none;
+    text-decoration: underline;
   }
-}
-
-.hidden {
-  display: none;
-}
-
-.visible {
-  display: block;
 }
 
 @-webkit-keyframes autofill {

@@ -1,0 +1,13 @@
+.welcome-image {
+  &.welcome-image_flex_center-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__picture {
+    border-radius: 50%;
+    max-width: 150px;
+    width: 100%;
+  }
+}

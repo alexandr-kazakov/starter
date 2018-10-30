@@ -1,4 +1,7 @@
 .welcome-box {
+  &.welcome-box_text-align_center {
+    text-align: center;
+  }
   &__content {
   }
   &__content-image {
@@ -8,5 +11,17 @@
   &__content-subtitle {
   }
   &__content-descr {
+    display: inline-block;
+    position: relative;
+    &:before {
+      @include blink;
+      bottom: 5px;
+      background-color: #fff;
+      content: '';
+      height: 2px;
+      position: absolute;
+      right: -4px;
+      width: 2px;
+    }
   }
 }

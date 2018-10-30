@@ -1,0 +1,24 @@
+.section-header {
+  &.section-header_text-align_center {
+    text-align: center;
+  }
+  &.section-header_margin_b_md {
+    margin-bottom: 50px;
+    @include media('<xl') {
+      margin-bottom: 40px;
+    }
+    @include media('<lg') {
+      margin-bottom: 30px;
+    }
+    @include media('<md') {
+      margin-bottom: 20px;
+    }
+  }
+  &__title {
+    font-size: 3rem;
+    margin: 0 0 10px 0;
+  }
+  &__subtitle {
+    font-size: 2rem;
+  }
+}

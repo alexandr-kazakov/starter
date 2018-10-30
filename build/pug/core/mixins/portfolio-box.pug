@@ -1,0 +1,7 @@
+mixin portfolio-box(link, bgSrc, bgAlt, logoSrc, logoAlt, descr)
+  +b.portfolio-box&attributes(attributes)
+    +e.A.link(href= link, target='_blank')
+      +e.IMG.bg(src= bgSrc, alt= bgAlt)
+      +e.FIGURE.figure
+        +e.IMG.logo(src= logoSrc, alt= logoAlt)
+        +e.FIGCAPTION.figcaption= descr

@@ -1,5 +1,62 @@
 .section {
-  &.section_bg-black {
+  &.section_padding_t-b_md {
+    padding: 50px 0;
+    @include media('<xl') {
+      padding: 40px 0;
+    }
+    @include media('<lg') {
+      padding: 30px 0;
+    }
+    @include media('<md') {
+      padding: 20px 0;
+    }
+  }
+  &.section_padding_t-b_lg {
+    padding: 60px 0;
+    @include media('<xl') {
+      padding: 50px 0;
+    }
+    @include media('<lg') {
+      padding: 40px 0;
+    }
+    @include media('<md') {
+      padding: 30px 0;
+    }
+  }
+  &.section_padding_t-b_xl {
+    padding: 70px 0;
+    @include media('<xl') {
+      padding: 60px 0;
+    }
+    @include media('<lg') {
+      padding: 50px 0;
+    }
+    @include media('<md') {
+      padding: 40px 0;
+    }
+  }
+  &.section_bg-color_black {
     background-color: #000;
+  }
+  &.section_bg-color_gray {
+    background-color: #f4f4f4;
+  }
+  &.section_bg_image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 37%;
+    position: relative;
+  }
+  &.section_welcome {
+    background-image: url(../img/backgrounds/welcome-bg.jpg);
+    &:before {
+      content: '';
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.726);
+      height: 100%;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
   }
 }

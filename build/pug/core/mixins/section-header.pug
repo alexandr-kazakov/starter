@@ -1,0 +1,7 @@
+mixin section-header(title, subtitle, descr)
+  +b.HEADER.section-header&attributes(attributes)
+    +e.H2.title= title
+    if subtitle
+      +e.SPAN.subtitle= subtitle
+    if descr
+      p descr

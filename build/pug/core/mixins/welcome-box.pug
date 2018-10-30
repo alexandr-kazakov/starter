@@ -1,9 +1,6 @@
-mixin welcome-box(title, subtitle, descr, alt)
-  // begin Welcome-Box
-  +b.welcome-box
+mixin welcome-box(title, subtitle, descr)
+  +b.welcome-box_theme_dark&attributes(attributes)
     +e.content
-      +e.IMG.content-image(src="", alt=alt)
       +e.H1.content-title= title
       +e.H2.content-subtitle= subtitle
-      +e.P.content-descr= descr
-  // end Welcome-Box
+      +e.P.content-descr=descr
