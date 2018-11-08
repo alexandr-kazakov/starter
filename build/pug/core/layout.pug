@@ -1,18 +1,19 @@
-include ../bemto/bemto.pug
-include   mixins.pug
+include ../bemto/bemto
+include   mixins
 
 doctype html
-html(lang='ru')
-  block head
+html(lang="ru")
+  block vars
   head
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
     meta( name="format-detection" content="telephone=no")
     link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700&amp;subset=cyrillic" rel="stylesheet")
-    title 
-      block title
-    link(rel="stylesheet" href="css/bundle.css")
+    title #{pageTitle}
+    meta(name='description', content= pageDescription)
+    meta(name='keywords', content= pageKeywords)
+    link(rel="stylesheet" href="css/bundle.min.css")
   body
     block content
 
