@@ -5,6 +5,7 @@ const postcss = require('gulp-postcss');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('autoprefixer');
 const uglify = require('gulp-uglify');
+const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
 const pug = require('gulp-pug');
 const replace = require('gulp-replace');

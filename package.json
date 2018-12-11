@@ -1,7 +1,7 @@
 {
-  "name": "project",
+  "name": "Project",
   "version": "1.0.0",
-  "description": "",
+  "description": "HTML template. Used by Pug, SASS, Babel, Webpack, Gulp.",
   "main": "gulpfile.js",
   "dependencies": {
     "@fancyapps/fancybox": "^3.3.5",
@@ -43,8 +43,12 @@
     "last 2 versions"
   ],
   "scripts": {
+    "start": "gulp watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Yuri Artiukh <akella.a@gmail.com> (http://riverco.de)",
-  "license": "ISC"
+  "author": {
+    "name": "Alexandr Kazakov",
+    "email": "alexandr.kazakov1@gmail.com",
+    "url": "https://github.com/alexandr-kazakov"
+  }
 }

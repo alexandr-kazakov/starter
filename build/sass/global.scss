@@ -1,9 +1,12 @@
 @import 'core/variables';
 @import 'core/mixins';
+@import 'core/functions';
 @import 'libraries/normalize';
-@import 'blocks/grid';
+@import 'libraries/swiper-slider';
+@import 'libraries/fancybox';
 
 @import 'core/base';
+@import 'core/helper-classes';
 
 // @import '../../node_modules/swiper/dist/css/swiper';
 
