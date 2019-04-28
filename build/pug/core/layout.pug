@@ -7,15 +7,20 @@ html(lang="ru")
   head
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    //- meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='viewport', content='width=device-width,initial-scale=1.0, maximum-scale=1, shrink-to-fit=no')
+    // begin Удалить <meta name="robots"
+    meta(name="robots" content="noindex, nofollow")
+    // end Удалить <meta name="robots"
     meta( name="format-detection" content="telephone=no")
-    link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700&amp;subset=cyrillic" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700&amp;subset=cyrillic" rel="stylesheet")
     title #{pageTitle}
     meta(name='description', content= pageDescription)
     meta(name='keywords', content= pageKeywords)
     link(rel="stylesheet" href="css/bundle.min.css")
   body
     block content
+
 
 
     block scripts 

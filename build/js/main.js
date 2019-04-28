@@ -4,7 +4,8 @@ import './libraries/inputmask';
 // import './libraries/inputmask';
 
 // form jQuery Core + Plugins
-import './libraries/jquery';
+// import './libraries/jquery';
+import '../../node_modules/jquery/dist/jquery';
 import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox';
 
 // import './blocks/test';
